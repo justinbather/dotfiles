@@ -31,6 +31,8 @@ bindkey "^[[B" history-search-forward
 #eza alias - better ls
 alias ls="eza --icons=always --grid --group-directories-first"
 
+alias ll="eza --absolute=follow --recurse --level=3 --git-ignore  | fzf-tmux -p | xargs nvim"
+
 #zoxide alias - better cd
 alias cd="z"
 eval "$(zoxide init zsh)"
